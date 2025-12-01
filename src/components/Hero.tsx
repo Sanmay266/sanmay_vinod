@@ -26,7 +26,7 @@ export default function Hero() {
                 >
                     <span className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-secondary/50 border border-border/50 text-sm text-muted-foreground mb-6 backdrop-blur-sm">
                         <Sparkles className="w-4 h-4 text-primary" />
-                        Available for freelance work
+                        Open to opportunities
                     </span>
                 </motion.div>
 
@@ -34,11 +34,11 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6"
+                    className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-6 font-mono"
                 >
-                    Building digital <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-gray-500">
-                        experiences
+                    From data to deploy, <br />
+                    <span className="text-muted-foreground">
+                        I make models work.
                     </span>
                 </motion.h1>
 
@@ -48,7 +48,7 @@ export default function Hero() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
                 >
-                    I'm Sanmay Vinod, a Full Stack Developer. I craft accessible, pixel-perfect, and performant web applications with modern technologies.
+                    Sanmay Vinod — AI/ML engineer who builds pipelines, trains models, and ships them to production.
                 </motion.p>
 
                 <motion.div

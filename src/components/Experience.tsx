@@ -1,88 +1,61 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Briefcase, Calendar } from 'lucide-react';
 
 const experiences = [
     {
-        company: 'College of Engineering Trikaripur',
-        role: 'B.Tech CSE Student',
-        period: '2021 - Present',
-        description: 'Pursuing Computer Science Engineering with focus on AI/ML, Full Stack Development, and Cloud Technologies. Active participant in hackathons and technical events.',
-        skills: ['Python', 'Machine Learning', 'React', 'AWS'],
+        company: 'Codtech IT Solutions',
+        role: 'AI Intern',
+        period: 'Oct 2025 – Present',
+        description: 'Building NLP pipelines, neural style transfer models, and API-first inference systems with Python, PyTorch, and OpenAI.',
     },
     {
-        company: 'Personal Projects',
-        role: 'Full Stack Developer',
-        period: '2022 - Present',
-        description: 'Building and deploying web applications using modern technologies. Exploring AI/ML integration with web platforms and cloud infrastructure.',
-        skills: ['Next.js', 'TypeScript', 'Docker', 'PostgreSQL'],
+        company: 'Alpha Innovations',
+        role: 'ML Intern',
+        period: 'Sep – Nov 2025',
+        description: 'Developed supply-chain forecasting engine with time-series ML pipelines and automated workflow orchestration.',
     },
     {
-        company: 'Freelance',
-        role: 'Web Developer',
-        period: '2023 - Present',
-        description: 'Developing custom web solutions for clients. Creating responsive, accessible, and performant websites with modern frameworks.',
-        skills: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB'],
+        company: 'Vislona',
+        role: 'ML Intern',
+        period: 'Sep – Oct 2025',
+        description: 'Built image quality analysis system and dual AI task routing with LightGBM + Gemini API (95% accuracy).',
     },
 ];
 
 export default function Experience() {
     return (
-        <section id="experience" className="min-h-screen py-20 flex items-center justify-center relative">
+        <section id="experience" className="py-20">
             <div className="container px-6 mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
-                    className="text-center mb-16"
+                    className="text-center mb-12"
                 >
-                    <h2 className="text-4xl font-bold mb-4">Work Experience</h2>
-                    <p className="text-muted-foreground max-w-2xl mx-auto">
-                        My professional journey and the companies I've had the privilege to work with.
-                    </p>
+                    <h2 className="text-4xl font-bold mb-4">Experience</h2>
                 </motion.div>
 
-                <div className="max-w-3xl mx-auto space-y-8">
+                <div className="max-w-3xl mx-auto relative">
+                    <div className="absolute left-[6px] top-3 bottom-3 w-px bg-border" />
+
                     {experiences.map((exp, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            transition={{ duration: 0.3, delay: index * 0.1 }}
+                            className="relative pl-10 pb-10 last:pb-0"
                         >
-                            <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors relative overflow-hidden">
-                                <div className="absolute top-0 left-0 w-1 h-full bg-primary/50" />
-                                <CardHeader>
-                                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
-                                        <CardTitle className="text-xl font-bold flex items-center gap-2">
-                                            <Briefcase className="w-5 h-5 text-primary" />
-                                            {exp.role}
-                                        </CardTitle>
-                                        <div className="flex items-center text-sm text-muted-foreground bg-secondary/50 px-3 py-1 rounded-full w-fit">
-                                            <Calendar className="w-4 h-4 mr-2" />
-                                            {exp.period}
-                                        </div>
-                                    </div>
-                                    <h3 className="text-lg font-semibold text-foreground/80">{exp.company}</h3>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-muted-foreground mb-4">{exp.description}</p>
-                                    <div className="flex flex-wrap gap-2">
-                                        {exp.skills.map((skill) => (
-                                            <span
-                                                key={skill}
-                                                className="px-2 py-1 text-xs rounded-md bg-primary/10 text-primary border border-primary/20"
-                                            >
-                                                {skill}
-                                            </span>
-                                        ))}
-                                    </div>
-                                </CardContent>
-                            </Card>
+                            <div className="absolute left-0 w-[13px] h-[13px] rounded-full bg-muted-foreground/40 mt-2" />
+
+                            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+                                <h3 className="text-lg font-medium">{exp.role} <span className="text-muted-foreground font-normal">@ {exp.company}</span></h3>
+                                <span className="text-muted-foreground/60">{exp.period}</span>
+                            </div>
+                            <p className="text-muted-foreground leading-relaxed">{exp.description}</p>
                         </motion.div>
                     ))}
                 </div>

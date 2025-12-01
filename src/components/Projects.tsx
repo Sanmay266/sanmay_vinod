@@ -1,35 +1,38 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, ArrowRight } from 'lucide-react';
+import { Github, ArrowRight, Clock } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 const projects = [
     {
-        title: 'E-Commerce Platform',
-        description: 'A full-featured online store with cart, checkout, and admin dashboard.',
-        tags: ['Next.js', 'TypeScript', 'Tailwind', 'Stripe'],
-        github: 'https://github.com/Sanmay266',
+        title: 'AutoML Pipeline',
+        description: 'Production-ready end-to-end AutoML pipeline with data validation, model selection using Optuna, MLflow tracking, champion-challenger registry, drift detection, and FastAPI deployment.',
+        tags: ['Python', 'MLflow', 'Prefect', 'Optuna', 'FastAPI', 'DVC'],
+        github: 'https://github.com/Sanmay266/AutoML_Pipeline',
         demo: '#',
-        image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1527474305487-b87b222841cc?w=800&q=80',
+        status: 'completed',
     },
     {
-        title: 'Task Management App',
-        description: 'Collaborative task manager with real-time updates and team features.',
-        tags: ['React', 'Firebase', 'Redux', 'MUI'],
-        github: 'https://github.com/Sanmay266',
+        title: 'MCP Builder',
+        description: 'A tool for building and managing Model Context Protocol (MCP) servers. Simplifies the creation of AI-powered tools and integrations with a visual builder interface.',
+        tags: ['Python', 'TypeScript', 'MCP', 'AI Tools'],
+        github: 'https://github.com/Sanmay266/MCP_Builder',
         demo: '#',
-        image: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80',
+        status: 'in-progress',
     },
     {
-        title: 'AI Content Generator',
-        description: 'SaaS application for generating blog posts and social media content using AI.',
-        tags: ['OpenAI API', 'Next.js', 'PostgreSQL', 'Prisma'],
-        github: 'https://github.com/Sanmay266',
+        title: 'RAG Chatbot',
+        description: 'Retrieval-Augmented Generation chatbot built with OpenAI and FastAPI. Enables intelligent document Q&A with vector embeddings and semantic search.',
+        tags: ['Python', 'OpenAI', 'FastAPI', 'RAG', 'LangChain'],
+        github: 'https://github.com/Sanmay266/Rag_chatbot_fastAPI',
         demo: '#',
-        image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
+        image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&q=80',
+        status: 'completed',
     },
 ];
 
@@ -70,7 +73,14 @@ export default function Projects() {
                                     />
                                 </div>
                                 <CardHeader>
-                                    <CardTitle>{project.title}</CardTitle>
+                                    <div className="flex items-center justify-between">
+                                        <CardTitle>{project.title}</CardTitle>
+                                        {project.status === 'in-progress' && (
+                                            <span className="px-2 py-0.5 text-xs rounded-full bg-yellow-500/20 text-yellow-500 border border-yellow-500/30">
+                                                In Progress
+                                            </span>
+                                        )}
+                                    </div>
                                     <CardDescription>{project.description}</CardDescription>
                                 </CardHeader>
                                 <CardContent className="flex-grow">
@@ -91,11 +101,14 @@ export default function Projects() {
                                             <Github size={16} /> Code
                                         </Button>
                                     </Link>
-                                    <Link href={project.demo} target="_blank" className="w-full">
-                                        <Button size="sm" className="w-full gap-2">
-                                            <ExternalLink size={16} /> Demo
-                                        </Button>
-                                    </Link>
+                                    <Button
+                                        size="sm"
+                                        className="w-full gap-2 cursor-not-allowed opacity-60"
+                                        disabled
+                                        title="Coming Soon"
+                                    >
+                                        <Clock size={16} /> Coming Soon
+                                    </Button>
                                 </CardFooter>
                             </Card>
                         </motion.div>
