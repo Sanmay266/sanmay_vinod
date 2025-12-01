@@ -11,24 +11,24 @@ const projects = [
         title: 'E-Commerce Platform',
         description: 'A full-featured online store with cart, checkout, and admin dashboard.',
         tags: ['Next.js', 'TypeScript', 'Tailwind', 'Stripe'],
-        github: 'https://github.com',
-        demo: 'https://demo.com',
+        github: 'https://github.com/Sanmay266',
+        demo: '#',
         image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
     },
     {
         title: 'Task Management App',
         description: 'Collaborative task manager with real-time updates and team features.',
         tags: ['React', 'Firebase', 'Redux', 'MUI'],
-        github: 'https://github.com',
-        demo: 'https://demo.com',
+        github: 'https://github.com/Sanmay266',
+        demo: '#',
         image: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?w=800&q=80',
     },
     {
         title: 'AI Content Generator',
         description: 'SaaS application for generating blog posts and social media content using AI.',
         tags: ['OpenAI API', 'Next.js', 'PostgreSQL', 'Prisma'],
-        github: 'https://github.com',
-        demo: 'https://demo.com',
+        github: 'https://github.com/Sanmay266',
+        demo: '#',
         image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
     },
 ];
@@ -62,6 +62,7 @@ export default function Projects() {
                             <Card className="h-full flex flex-col overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors group">
                                 <div className="relative h-48 overflow-hidden">
                                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent z-10" />
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
                                     <img
                                         src={project.image}
                                         alt={project.title}

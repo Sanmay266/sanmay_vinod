@@ -46,6 +46,7 @@ export default function Navbar() {
                             className="relative w-10 h-10 rounded-full overflow-hidden cursor-pointer border-2 border-primary/20 hover:border-primary transition-colors"
                             onClick={() => setIsProfileOpen(true)}
                         >
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                                 src="/images/profile-pic.jpg"
                                 alt="Sanmay Vinod"
@@ -148,6 +149,7 @@ export default function Navbar() {
                             className="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-primary"
                             onClick={(e) => e.stopPropagation()}
                         >
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                                 src="/images/profile-pic.jpg"
                                 alt="Sanmay Vinod"

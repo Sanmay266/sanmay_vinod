@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Code2, Database, Layout, Settings, Terminal, Wrench } from 'lucide-react';
+import { Code2, Database, Layout, Settings } from 'lucide-react';
 
 const skillCategories = [
     {

@@ -6,25 +6,25 @@ import { Briefcase, Calendar } from 'lucide-react';
 
 const experiences = [
     {
-        company: 'TechCorp',
-        role: 'Senior Full Stack Developer',
+        company: 'College of Engineering Trikaripur',
+        role: 'B.Tech CSE Student',
+        period: '2021 - Present',
+        description: 'Pursuing Computer Science Engineering with focus on AI/ML, Full Stack Development, and Cloud Technologies. Active participant in hackathons and technical events.',
+        skills: ['Python', 'Machine Learning', 'React', 'AWS'],
+    },
+    {
+        company: 'Personal Projects',
+        role: 'Full Stack Developer',
         period: '2022 - Present',
-        description: 'Leading a team of 5 developers to build scalable SaaS products. Implemented microservices architecture and improved system performance by 40%.',
-        skills: ['React', 'Node.js', 'AWS', 'Docker'],
+        description: 'Building and deploying web applications using modern technologies. Exploring AI/ML integration with web platforms and cloud infrastructure.',
+        skills: ['Next.js', 'TypeScript', 'Docker', 'PostgreSQL'],
     },
     {
-        company: 'Creative Agency',
-        role: 'Frontend Developer',
-        period: '2020 - 2022',
-        description: 'Developed award-winning websites for high-profile clients. Focused on creating immersive user experiences with WebGL and GSAP.',
-        skills: ['Vue.js', 'Three.js', 'GSAP', 'Sass'],
-    },
-    {
-        company: 'StartUp Inc',
-        role: 'Junior Developer',
-        period: '2018 - 2020',
-        description: 'Collaborated with the product team to launch the MVP. Built responsive UI components and integrated RESTful APIs.',
-        skills: ['React', 'Redux', 'Firebase'],
+        company: 'Freelance',
+        role: 'Web Developer',
+        period: '2023 - Present',
+        description: 'Developing custom web solutions for clients. Creating responsive, accessible, and performant websites with modern frameworks.',
+        skills: ['React', 'Tailwind CSS', 'Node.js', 'MongoDB'],
     },
 ];
 

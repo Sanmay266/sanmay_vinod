@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, Download, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import ParticleSphere from '@/components/ParticleSphere';
@@ -24,7 +24,8 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <span className="inline-block py-1 px-3 rounded-full bg-secondary/50 border border-border/50 text-sm text-muted-foreground mb-6 backdrop-blur-sm">
+                    <span className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-secondary/50 border border-border/50 text-sm text-muted-foreground mb-6 backdrop-blur-sm">
+                        <Sparkles className="w-4 h-4 text-primary" />
                         Available for freelance work
                     </span>
                 </motion.div>
