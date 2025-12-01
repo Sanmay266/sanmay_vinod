@@ -63,7 +63,7 @@ export default function Hero() {
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </Button>
                     </Link>
-                    <Link href="/Sanmay_Vinod.pdf" target="_blank">
+                    <Link href="/resume.pdf" target="_blank">
                         <Button variant="outline" size="lg" className="h-12 px-8 text-lg rounded-full backdrop-blur-sm bg-background/50">
                             Download CV
                             <Download className="ml-2 h-4 w-4" />
