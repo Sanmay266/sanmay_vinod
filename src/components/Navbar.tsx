@@ -80,9 +80,11 @@ export default function Navbar() {
                             <Link href="https://www.instagram.com/_sanmay_._._" target="_blank" className="text-muted-foreground hover:text-foreground hover:scale-110 transition-all duration-300">
                                 <Instagram size={20} />
                             </Link>
-                            <Button variant="default" size="sm" className="bg-primary hover:bg-foreground text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                                Resume
-                            </Button>
+                            <Link href="/resume.pdf" target="_blank">
+                                <Button variant="default" size="sm" className="bg-primary hover:bg-foreground text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    Resume
+                                </Button>
+                            </Link>
                         </div>
                     </div>
 
