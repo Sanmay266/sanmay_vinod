@@ -8,10 +8,10 @@ import ParticleSphere from '@/components/ParticleSphere';
 
 export default function Hero() {
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-20">
             {/* Background Gradient Blob */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-gray-400/10 rounded-full blur-3xl opacity-20 animate-pulse" />
-            <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-gray-600/10 rounded-full blur-3xl opacity-20" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] md:w-[1000px] md:h-[1000px] bg-gray-400/10 rounded-full blur-3xl opacity-20 animate-pulse" />
+            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] md:w-[800px] md:h-[800px] bg-gray-600/10 rounded-full blur-3xl opacity-20" />
 
             {/* Particle Sphere Animation */}
             <div className="absolute inset-0 z-0 flex items-center justify-center opacity-40 pointer-events-none">
@@ -77,7 +77,7 @@ export default function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1, duration: 1 }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce"
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block"
             >
                 <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center pt-2">
                     <div className="w-1 h-2 bg-muted-foreground/50 rounded-full" />

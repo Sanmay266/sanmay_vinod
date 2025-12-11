@@ -47,7 +47,7 @@ export default function Experience() {
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.3, delay: index * 0.1 }}
-                            className="relative pl-10 pb-10 last:pb-0"
+                            className="relative pl-6 sm:pl-10 pb-10 last:pb-0"
                         >
                             <div className="absolute left-0 w-[13px] h-[13px] rounded-full bg-muted-foreground/40 mt-2" />
 

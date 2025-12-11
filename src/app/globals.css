@@ -37,6 +37,10 @@
   --radius: 0.5rem;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .dark {
   --background: 0 0% 8%;
   --foreground: 0 0% 98%;
